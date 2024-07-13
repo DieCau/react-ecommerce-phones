@@ -1,5 +1,13 @@
+import MainHeader from "./components/MainHeader";
+import MainProduct from "./components/MainProduct";
+
 const App = () => {
-  return <h1 className="text-center">Hola React y Tailwind</h1>;
+  return (
+    <>
+      <MainHeader />
+      <MainProduct />
+    </>
+  );
 };
 
 export default App;

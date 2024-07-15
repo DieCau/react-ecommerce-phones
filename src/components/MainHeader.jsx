@@ -1,30 +1,30 @@
-import logoEmpresa from "@/assets/logoEmpresa.svg";
-import avatar1 from "@/assets/avatar1.jpg";
-import "@/../src/index.css";
+import logoEmpresa from "@/assets/images/logo.svg";
+import avatar from "@/assets/avatar/image-avatar.png";
+import MenuIcon from "./MenuIcon";
+import CartIcon from "./CartIcon";
 
 const MainHeader = () => {
   return (
-    <header className="flex container bg-slate-400 mx-auto px-4">
+    <header className="container mx-auto flex bg-slate-400 px-4">
       <button className="md:hidden">
-        <span className="material-symbols-outlined">Menu</span>
+        <MenuIcon />
       </button>
-      <img className="h-20 mr-auto md:mr-auto" src={logoEmpresa} alt="logo" />
-      <nav className="hidden md:block md:mr-auto">
+      <img className="mr-auto md:mr-0" src={logoEmpresa} alt="logo" />
+      <nav className="hidden md:mr-auto md:block">
         <a href="#">Colecciones</a>
         <a href="#">Hombres</a>
         <a href="#">Mujeres</a>
         <a href="#">Nosotros</a>
         <a href="#">Contacto</a>
       </nav>
-      <div className="flex gap-5">
+      <div className="flex gap-4">
         <button>
-          <span className="material-symbols-outlined">shopping_cart</span>
+          <CartIcon />
         </button>
       </div>
       <img
-        className="w-10 h-10 rounded-full object-cover"
-        src={avatar1}
-        alt=""
+        src={avatar}
+        alt="avatar"
       />
     </header>
   );

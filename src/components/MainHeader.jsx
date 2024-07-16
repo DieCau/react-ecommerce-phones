@@ -1,11 +1,13 @@
 import logoEmpresa from "@/assets/images/logo.svg";
 import avatar from "@/assets/avatar/image-avatar.png";
-import MenuIcon from "./MenuIcon";
-import CartIcon from "./CartIcon";
+import { CartIcon, MenuIcon, CloseIcon } from "./ui";
 
 const MainHeader = () => {
   const handleOpenMenu = () => {
     console.log("click");
+  };  
+  const handleCloseMenu = () => {
+    console.log("close");
   };
 
   return (
@@ -18,7 +20,10 @@ const MainHeader = () => {
         src={logoEmpresa}
         alt="logo empresa"
       />
-      <nav className="w-4/5 font-extrabold h-full p-8 gap-y-5 absolute top-0 left-0 bg-gray-400 flex flex-col md:mr-auto md:flex md:flex-row md:gap-4">
+      <nav className="absolute left-0 top-0 flex h-full w-4/5 flex-col gap-y-5 bg-gray-400 p-8 font-extrabold md:mr-auto md:flex md:flex-row md:gap-4">
+        <button className="mb-12" onClick={handleCloseMenu}>
+          <CloseIcon />
+        </button>
         <a href="#">Colecciones</a>
         <a href="#">Hombres</a>
         <a href="#">Mujeres</a>

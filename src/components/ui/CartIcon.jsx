@@ -1,4 +1,4 @@
-const CartIcon = (props) => {
+export const CartIcon = (props) => {
   return (
     <svg {...props} width="22" height="20" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -10,4 +10,3 @@ const CartIcon = (props) => {
   );
 };
 
-export default CartIcon;
